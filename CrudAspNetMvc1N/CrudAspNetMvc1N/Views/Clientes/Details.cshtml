@@ -1,0 +1,52 @@
+﻿@model CrudAspNetMvc1N.Models.Cliente
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logotipo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Logotipo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Logradouros)
+        </dt>
+
+        <dd>
+            @foreach (var logradouro in Model.Logradouros)
+            {
+                <p>@logradouro.Endereco</p>
+            }
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
