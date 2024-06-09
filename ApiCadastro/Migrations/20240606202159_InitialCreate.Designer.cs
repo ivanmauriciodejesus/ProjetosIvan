@@ -50,25 +50,7 @@ namespace ApiCadastro.Migrations
 
                     b.ToTable("Clientes");
                 });
-
-            modelBuilder.Entity("ApiCadastro.Models.Consultor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Consultores");
-                });
-
+                        
             modelBuilder.Entity("ApiCadastro.Models.Logradouro", b =>
                 {
                     b.Property<int>("Id")
@@ -91,30 +73,7 @@ namespace ApiCadastro.Migrations
 
                     b.ToTable("Logradouros");
                 });
-
-            modelBuilder.Entity("ApiCadastro.Models.Telefone", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("DDD")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Numero")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Tipo")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Telefones");
-                });
-
+                        
             modelBuilder.Entity("ApiCadastro.Models.Logradouro", b =>
                 {
                     b.HasOne("ApiCadastro.Models.Cliente", null)

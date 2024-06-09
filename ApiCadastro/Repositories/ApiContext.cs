@@ -18,8 +18,6 @@ namespace ApiCadastro.Repositories
         }
 
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Consultor> Consultores { get; set; }
-        public DbSet<Telefone> Telefones { get; set; }
         public DbSet<Logradouro> Logradouros { get; set; }
     }
 }

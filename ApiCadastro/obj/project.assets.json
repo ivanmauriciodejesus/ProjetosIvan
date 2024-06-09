@@ -3206,11 +3206,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dados\\ivan\\projetos-dotnet\\ApiCadastro\\ApiCadastro.csproj",
+      "projectUniqueName": "C:\\dados\\ivan\\ProjetosIvan\\ApiCadastro\\ApiCadastro.csproj",
       "projectName": "ApiCadastro",
-      "projectPath": "C:\\dados\\ivan\\projetos-dotnet\\ApiCadastro\\ApiCadastro.csproj",
+      "projectPath": "C:\\dados\\ivan\\ProjetosIvan\\ApiCadastro\\ApiCadastro.csproj",
       "packagesPath": "C:\\Users\\familiajesus\\.nuget\\packages\\",
-      "outputPath": "C:\\dados\\ivan\\projetos-dotnet\\ApiCadastro\\obj\\",
+      "outputPath": "C:\\dados\\ivan\\ProjetosIvan\\ApiCadastro\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\familiajesus\\AppData\\Roaming\\NuGet\\NuGet.Config",

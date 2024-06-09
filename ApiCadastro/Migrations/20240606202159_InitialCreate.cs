@@ -22,35 +22,7 @@ namespace ApiCadastro.Migrations
                 {
                     table.PrimaryKey("PK_Clientes", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "Consultores",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Consultores", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Telefones",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    DDD = table.Column<int>(type: "int", nullable: false),
-                    Numero = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Tipo = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Telefones", x => x.Id);
-                });
-
+            
             migrationBuilder.CreateTable(
                 name: "Logradouros",
                 columns: table => new
@@ -77,15 +49,9 @@ namespace ApiCadastro.Migrations
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
-        {
+        {            
             migrationBuilder.DropTable(
-                name: "Consultores");
-
-            migrationBuilder.DropTable(
-                name: "Logradouros");
-
-            migrationBuilder.DropTable(
-                name: "Telefones");
+                name: "Logradouros");            
 
             migrationBuilder.DropTable(
                 name: "Clientes");

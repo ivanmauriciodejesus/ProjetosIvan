@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MAlnVptPxZx5er2npF5ihqrpdiWkQZdmZXZu/ZQaJwfgc11sQtItUKJZG99ATExBSfVhtdWlTlKKYJqAadKXBQ==",
+  "dgSpecHash": "2Y2vzw9EmDoGO0n5SrQ6eohxsdXmZFeDjE1dX3anuuuL98Gtf8mijzMsSGDiy1o0MFt0BvpGqL1DcCta83YkbA==",
   "success": true,
-  "projectFilePath": "C:\\dados\\ivan\\projetos-dotnet\\ApiCadastro\\ApiCadastro.csproj",
+  "projectFilePath": "C:\\dados\\ivan\\ProjetosIvan\\ApiCadastro\\ApiCadastro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\familiajesus\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\familiajesus\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",

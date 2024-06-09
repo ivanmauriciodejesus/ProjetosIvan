@@ -41,13 +41,20 @@ namespace ApiCadastro.Controllers
         [HttpPut]
         [Route("{id:int}")]
         public async Task<IActionResult> Update([FromServices] ApiContext context, [FromRoute] int id, Cliente cliente)
-        {
-            var clienteLocalizado = await context.Clientes.FindAsync(id);
+        {            
+            var clienteLocalizado = await context.Clientes.AsNoTracking().Where(x => x.Id == id).Include(x => x.Logradouros).FirstOrDefaultAsync();
+         
             if (clienteLocalizado != null)
             {
-                clienteLocalizado.Nome = cliente.Nome;
-                
+                context.Logradouros.RemoveRange(clienteLocalizado.Logradouros);
                 await context.SaveChangesAsync();
+
+                clienteLocalizado.Nome = cliente.Nome;
+                clienteLocalizado.Logradouros = cliente.Logradouros;
+                
+                context.Clientes.Update(clienteLocalizado);
+                await context.SaveChangesAsync();
+
                 return Ok(clienteLocalizado);
             }
             return NotFound();
